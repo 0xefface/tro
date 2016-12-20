@@ -1,0 +1,34 @@
+﻿
+
+
+10000 = You cant do that right now.
+10001 = Thats already been done.
+10002 = There is no space for that.
+10003 = You have to remove something first.
+10004 = You cant open the door because it is locked.
+10005 = You cant go there.
+10006 = That did'nt work.
+10007 = You cant open the door because it is locked.
+10008 = That key will not work in this lock.
+10009 = NAK recieved 1009
+10010 = This is a redendent define.
+10011 = Your character type cannot wear that
+10012 = It's too bulky.
+10013 = You cannot open that door, that door will open when the last person in dungeon has left.
+10014 = The door is strangly sealed and will not open.
+10015 = You cant do that.
+10016 = Someelse is busy with that right now.
+10017 = Thats the wrong password.
+10018 = You cant do anything to it.
+10019 = That wouldnt make much sense.
+10020 = You've wasted your effort, it's not magical.
+10021 = You need to be closer for that to be effective.
+10022 = You cannot wield that while using a shield.
+10023 = You cannot wield that while using a two-handed weapon.
+
+										PacketWriter w25 = new PacketWriter(0x1A);
+                                        w25.WriteUInt32(cli.GameAccount.AccountId);
+                                        w25.WriteUInt32(0x00);
+                                        w25.WriteUInt32(0x9B); // the packet we are replying too, client must send it
+                                        w25.WriteBytes(new byte[] { 0x14, 0x27, 0x00, 0x00 }); // thr reply above in hex.
+                                        byte[] pno = w25.ToArray();

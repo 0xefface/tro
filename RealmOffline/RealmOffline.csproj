@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4F94219-1784-4A6D-88D2-7C1AD9AB1070}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RealmOffline</RootNamespace>
+    <AssemblyName>RealmOffline</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Built\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Built\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\Built\Debug\RealmOffline.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\Built\Release\RealmOffline.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\Account.cs" />
+    <Compile Include="Accounts\Character.cs" />
+    <Compile Include="Accounts\CharacterAffects.cs" />
+    <Compile Include="Accounts\CharacterSkills.cs" />
+    <Compile Include="Accounts\CharacterSpells.cs" />
+    <Compile Include="Accounts\CharacterStates.cs" />
+    <Compile Include="Accounts\PasswordHash.cs" />
+    <Compile Include="Channels\ChannelColor.cs" />
+    <Compile Include="Channels\ImportedChannels.cs" />
+    <Compile Include="Commands\OldCommand.cs" />
+    <Compile Include="Commands\ImportedCommands.cs" />
+    <Compile Include="Commands\SerializedObject.cs" />
+    <Compile Include="Commands\TestObject.cs" />
+    <Compile Include="Core\Attributes.cs" />
+    <Compile Include="Core\Channel.cs" />
+    <Compile Include="Core\CombatCloud.cs" />
+    <Compile Include="Core\Command.cs" />
+    <Compile Include="Core\ComponentCollection.cs" />
+    <Compile Include="Core\DebugInfo.cs" />
+    <Compile Include="Core\Entity.cs" />
+    <Compile Include="Core\Extentions.cs" />
+    <Compile Include="Core\IEntity.cs" />
+    <Compile Include="Core\ISerializable.cs" />
+    <Compile Include="Core\Item.cs" />
+    <Compile Include="Core\Items\Base\BaseGameItem.cs" />
+    <Compile Include="Core\Items\Base\BaseItem.cs" />
+    <Compile Include="Core\Items\Base\Chest.cs" />
+    <Compile Include="Core\Items\Base\Container.cs" />
+    <Compile Include="Core\Items\Base\Door.cs" />
+    <Compile Include="Core\Items\EquipmentSlot.cs" />
+    <Compile Include="Core\Items\ImportedItems.cs" />
+    <Compile Include="Core\Items\ItemType.cs" />
+    <Compile Include="Core\MagicMail.cs" />
+    <Compile Include="Core\Mobile.cs" />
+    <Compile Include="Core\Mobiles\BaseMobile.cs" />
+    <Compile Include="Core\Mobiles\Brain.cs" />
+    <Compile Include="Core\Mobiles\ImportedMobiles.cs" />
+    <Compile Include="Core\Mobiles\Mob.cs" />
+    <Compile Include="Core\Mobiles\NPC.cs" />
+    <Compile Include="Core\Race.cs" />
+    <Compile Include="Core\RoomLocation.cs" />
+    <Compile Include="Core\Rooms\ImportedRooms.cs" />
+    <Compile Include="Core\Rooms\InstancedRoom.cs" />
+    <Compile Include="Core\Rooms\IRoom.cs" />
+    <Compile Include="Core\Rooms\Room.cs" />
+    <Compile Include="Core\Rooms\IRoomEntity.cs" />
+    <Compile Include="Core\Rooms\RoomDecoration.cs" />
+    <Compile Include="Core\Rooms\RoomItem.cs" />
+    <Compile Include="Core\Rooms\RoomProxy.cs" />
+    <Compile Include="Core\ScriptResolver.cs" />
+    <Compile Include="Core\Skill.cs" />
+    <Compile Include="Core\BaseSpell.cs" />
+    <Compile Include="Core\Spells\ISpell.cs" />
+    <Compile Include="Core\Spells\Sorcery\Teleport.cs" />
+    <Compile Include="Core\Spells\Spell.cs" />
+    <Compile Include="Core\WhatsNewMessage.cs" />
+    <Compile Include="Localization\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\Resources.cs" />
+    <Compile Include="Logs\RLog.cs" />
+    <Compile Include="Managers\MySqlManager.cs" />
+    <Compile Include="Managers\XMLManager.cs" />
+    <Compile Include="Packets\CharacterPacket.cs" />
+    <Compile Include="Packets\ClassType.cs" />
+    <Compile Include="Packets\Packet.cs" />
+    <Compile Include="Packets\PacketTools.cs" />
+    <Compile Include="Packets\RealmPacketIO.cs" />
+    <Compile Include="Packets\ServerObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queues\LoggedInPlayers.cs" />
+    <Compile Include="Queues\TimedQueue.cs" />
+    <Compile Include="ServerGlobals.cs" />
+    <Compile Include="TCP\Base\ClientBase.cs" />
+    <Compile Include="TCP\Base\ServerBase.cs" />
+    <Compile Include="TCP\Base\XMLDatabase.cs" />
+    <Compile Include="TCP\BufferManager.cs" />
+    <Compile Include="TCP\CellDef.cs" />
+    <Compile Include="TCP\Client.cs" />
+    <Compile Include="TCP\IExecObject.cs" />
+    <Compile Include="TCP\SpinWaitLock.cs" />
+    <Compile Include="TCP\Tasks\AsyncPacketProcessor.cs" />
+    <Compile Include="TCP\Tasks\AsyncTask.cs" />
+    <Compile Include="TCP\ThreadManager.cs" />
+    <Compile Include="TCP\WorldClient.cs" />
+    <Compile Include="Tools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Items\Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Packet28.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

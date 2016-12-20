@@ -1,0 +1,2462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D57916F9-1BED-40B0-9595-F45FD3A2FC3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scripts</RootNamespace>
+    <AssemblyName>Scripts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Built\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Built\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Built\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Scripts.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Built\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Scripts.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Channels\BardsTune.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Channels\Emulator.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Channels\GameHelp.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Channels\General.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Channels\Newbies.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Channels\TheMeetingPlace.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Channels\Trading.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Commands\Join.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Commands\List.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Commands\Unbusy.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Commands\Connections.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Academy Arcanum\Room5028.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Ali%27s Weaponry Interior\Room6815.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Ali%27s Weaponry\Room5815.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\All Things Useful\Room5089.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Anything and Everything Interior\Room6801.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Anything and Everything\Room5801.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Arimathor Armory Interior\Room6803.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Arimathor Armory\Room5803.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Arimathor Auctions\Room5816.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Arimathor Gatekeeper\Room5810.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Asgard\Room5907.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Bloated Swine Tavern\Room5059.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Caster%27s Cache Interior\Room6807.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Caster%27s Cache\Room5807.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Cutpurse College\Room5061.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Desert Magic Interior\Room6806.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Desert Magic\Room5806.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Desert Rose Interior\Room6811.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Desert Rose\Room5811.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Desert Wind Interior\Room6812.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Desert Wind\Room5812.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Despothes%27s Temple\Room1236.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Despothes%27s Temple\Room1238.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3151.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3154.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3157.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3161.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3167.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3175.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3182.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3189.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3195.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3251.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Devon Forest\Room3257.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster Chapel Interior\Room6029.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster Chapel\Room5029.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster Gatekeeper\Room5043.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster\Room5011.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster\Room5025.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster\Room5026.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster\Room5040.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster\Room5055.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster\Room5070.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster\Room5071.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster\Room5085.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\East Leinster\Room5086.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Expeditionary Provisions Interior\Room6011.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Expeditionary Provisions\Room5027.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12001.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12006.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12011.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12016.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12021.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12026.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12031.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12036.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12041.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12046.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12047.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12048.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12049.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12145.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12146.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12147.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Forest of Death\Room12148.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Goddess Dreams\Room5201.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Hard Rox Cafe\Room5010.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Havenwood Inn Lobby\Room6088.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Havenwood Inn\Room5088.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Heroic Habits Interior\Room6058.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Heroic Habits\Room5058.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Incantations Institute Interior\Room6805.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Incantations Institute\Room5805.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Ivory Moon Cafe\Room5042.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10000.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10001.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10002.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10003.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10004.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10005.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10006.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10007.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10015.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10023.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10031.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10039.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Killing Fields\Room10047.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Kurz Gatekeeper\Room7009.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Leinster Clothing Ltd\Room5075.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Linez%27 Cafe\Room5802.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Murias Gatekeeper\Room5206.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Naktos%27 Morgue\Room72500017.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Naktos%27 Morgue\Room72501017.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Outside Kappy%27s House\Room150000002.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Picnic Grounds\Room5056.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Plaza Eatery\Room5087.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Realm Trade Center\Room5041.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Room0.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\RoomDecorations\Arrows\NorthEastArrow082.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Arrows\RightArrow080.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Arrows\SouthEastArrow081.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Buildings\ClosedStoneArchWay199.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Buildings\LargeVillage197.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Buildings\LargeVillage198.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Buildings\SmallVillage194.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Buildings\SmallVillage195.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Buildings\StoneArchWay193.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\LargeBushes224.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush060.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush061.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush062.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush065.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush066.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush068.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush069.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush070.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush071.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush100.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleBush104.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SingleLog067.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SmallBushes222.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Bushes\SmallBushes223.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Clouds\Cloud240.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Clouds\Cloud241.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Clouds\Cloud242.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Clouds\Cloud243.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Clouds\Cloud244.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Clouds\Cloud245.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Clouds\Cloud246.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Flowers\FlowerClump063.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Flowers\FlowerClump064.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch020.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch180.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch181.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch182.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch186.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch187.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch188.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch189.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch225.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\DirtPatch226.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch021.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch022.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch023.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch024.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch025.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch026.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch027.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch028.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch110.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch111.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch112.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch113.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch114.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch115.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch183.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch184.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\GrassPatch185.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\LargeGrassPatch248.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Ground\LargeGrassPatch249.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Hills\LargeGrassHill173.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Hills\LargeGrassHill174.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Hills\LargeMountainRange171.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Hills\LargeSandunes169.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Hills\SmallMountain172.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Hills\SmallSandDune170.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Misc\MerchantCart085.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Misc\PicnicItems086.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Misc\SmallMoon091.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Misc\SmallSun090.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Misc\TombStone250.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Misc\TombStone251.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Misc\TombStone252.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\AlphaPatch958.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\AlphaPatch959.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\AlphaPatch960.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\AplhaPatch957.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\BlueRect008.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\BlueRect009.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\BlueRect010.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\BlueRect011.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\BlueRect014.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\BlueRect016.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\LightBlueHalfCircle954.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\LightBlueHalfCircle955.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\LightBlueRect752.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\LightBlueRect951.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\LightBlueRect952.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\LightBlueRect953.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\PinkAlphaGrassRect754.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteAlphaGrassRect753.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect001.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect002.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect003.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect004.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect005.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect006.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect007.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect012.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect013.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteRect751.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteSplatterRect755.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rectangles\WhiteSplatterRect756.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeCurvedRiverEast214.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeCurvedRiverSouth215.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeLake930.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverCoastEast945.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverCoastEast946.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverCoastNorth947.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverCoastSouth948.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverCoastSouth949.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverCoastSouth950.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverNorth220.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverNorth221.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverNorthSouth239.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverNorthWest247.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverSouth218.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverSouthEast939.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverSouthWest216.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverWest210.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverWest211.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverWest212.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeRiverWest213.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LargeWestSouthRiver932.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LogOverRiverNorth209.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\LogOverRiverWest208.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\RiverOasis237.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallCurvedRiver238.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallCurvedRiver938.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallNorthSouthRiver934.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiver205.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiver935.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiver936.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiverCoast940.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiverCoast941.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiverCoast942.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiverCoast943.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiverCoast944.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiverCurvedSouth219.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiverNorth206.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiverNorthWest217.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallRiverT207.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallSRiver236.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\SmallWestSouthRiver933.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rivers\WestNorthCurvedRiver937.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Roads\EastWestRoad230.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Roads\EastWestRoad231.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Roads\NorthEastCurvedRoad228.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Roads\NorthSouthRoad232.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Roads\NorthSouthRoad233.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Roads\NorthSouthRoadCurvedWest235.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Roads\SmallNorthSouthRoad234.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Roads\WestEastCurvedSouthRoad227.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Roads\WestEastRoad229.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rocks\Rock200.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rocks\Rock201.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rocks\Rock202.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rocks\Rock203.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Rocks\Rock204.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Skies\ClearTealSky093.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Skies\DarkStarryNightSky096.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Skies\LighterTealSky095.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Skies\LightTealSky094.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Skies\StarryNightTealSky092.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeCornerTree108.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeDualTrees101.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForest149.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForest150.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForest151.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForest163.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForest164.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForest165.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForest166.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForest167.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForest168.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeForestBackdrop175.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree102.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree106.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree107.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree120.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree121.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree122.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree123.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree124.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree125.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree126.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree127.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeSingleTree128.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeTreeClump103.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeTreeClump105.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\LargeTreeClump109.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree040.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree041.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree042.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree043.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree044.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree045.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree046.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree047.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree048.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree049.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree050.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SingleTree051.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallForest152.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallForest153.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallForest154.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallForest155.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallForest156.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallForest176.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallForest177.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallSingleTree135.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallSingleTree140.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallSingleTree141.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeAndRock131.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeAndRock132.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeAndRock135.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeAndRock139.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeAndRock157.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeBush142.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump133.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump134.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump137.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump138.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump145.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump146.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump158.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump159.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump160.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump161.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\SmallTreeClump162.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Trees\TreeClump015.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Walls\SmallWallNorthWest196.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Walls\WallNorthWest190.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Walls\WallPieceVertical191.cs" />
+    <Compile Include="Scripts\Rooms\RoomDecorations\Walls\WallWestEast192.cs" />
+    <Compile Include="Scripts\Rooms\Sand and Roses Interior\Room6808.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Sands and Roses\Room5808.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\School of Soldiery Interior\Room6814.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\School of Soldiery\Room5814.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Scimitar Training Ground\Room6817.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Scimitar War Room\Room6813.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\South Havenwood\Room4000.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\South Havenwood\Room4001.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\South Havenwood\Room4002.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\South Havenwood\Room4016.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\South Havenwood\Room4017.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\South Havenwood\Room4031.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\South Havenwood\Room4032.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\South Havenwood\Room4046.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\South Havenwood\Room4047.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Special\GameDen6079.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Spells of Fire\Room5013.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Straight Off The Loom Interior\Room6044.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Straight Off The Loom\Room5044.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Tackle Treasury Interior\Room6809.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Tackle Treasury\Room5809.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Take It or Leave It Interior\Room6608.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Temple of Despothes\Room1237.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\TestRooms\Room5012.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\TestRooms\TestRoom1.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Badlands\Room2907.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Badlands\Room2908.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Badlands\Room2909.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Badlands\Room2912.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Badlands\Room2917.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Badlands\Room2922.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Blade%27s Edge\Room5060.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Bloated Swine\Room6059.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Ebony Crystal Interior\Room6074.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Ebony Crystal\Room5074.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Forge Interior\Room6073.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Forge\Room5073.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Scimitar Shops\Room6802.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Scimitar Tavern\Room5800.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Scimitar Tavern\Room6800.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Shifting Dune Interior\Room6804.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Shifting Dune\Room5804.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Supply Store West\Room1471.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\The Valhalla Inn Lobby\Room6911.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\To The Hilt Interior\Room6014.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\To the Hilt\Room5014.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Top Tonsorial Interior\Room6072.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Top Tonsorial\Room5072.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Training Grounds\Room5057.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Training Grounds\Room5813.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Training Grounds\Room5910.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Troll Bragger Inn\Room5076.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Troll Spit Tavern\Room5012.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Valhalla Inn\Room5911.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Valhalla Shops\Room6912.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Village Green\Room5817.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1100.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1101.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1102.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1103.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1104.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1105.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1106.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1107.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1108.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1109.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1110.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1111.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1112.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1113.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1114.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1115.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1116.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1117.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1118.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1119.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1120.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1121.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1122.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1123.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1124.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1125.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1126.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1127.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1128.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1129.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1130.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1131.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1132.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1133.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1134.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1135.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1136.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1137.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1138.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1139.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1140.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1141.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1142.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1143.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1144.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1145.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1146.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1147.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1148.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1150.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1151.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1152.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1153.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1154.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1155.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1156.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1157.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1158.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1159.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1160.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1161.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1162.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1163.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1164.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1165.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1166.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1167.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1168.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1169.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1170.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1171.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1172.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1173.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1174.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1175.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1177.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1178.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1179.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1180.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1181.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1182.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1183.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1184.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1185.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1186.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1187.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1188.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1189.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1190.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1191.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1192.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1193.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1194.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1195.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1196.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1197.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1200.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1201.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1202.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1203.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1204.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1205.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1206.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1207.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1208.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1209.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1210.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1211.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1212.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1213.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1214.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1215.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1216.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1217.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1218.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1219.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1220.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1221.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1222.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1223.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1224.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1225.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1226.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1227.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1228.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1229.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1230.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1231.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1232.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1233.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1234.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1235.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1239.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1240.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1241.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1242.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1243.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1245.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1246.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1247.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1250.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1251.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1252.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1253.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1254.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1255.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1256.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1257.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1258.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1259.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1260.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1261.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1262.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1263.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1264.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1265.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1266.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1267.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1268.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1269.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1270.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1271.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1272.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1273.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1274.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1275.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1276.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1277.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1278.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1279.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1280.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1281.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1282.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1283.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1284.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1285.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1286.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1287.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1288.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1289.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1290.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1291.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1292.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1293.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1294.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1295.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1296.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1300.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1301.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1302.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1303.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1304.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1305.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1306.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1307.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1308.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1309.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1310.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1311.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1312.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1313.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1314.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1315.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1316.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1317.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1318.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1319.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1320.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1321.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1322.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1323.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1324.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1325.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1326.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1327.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1328.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1329.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1330.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1331.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1332.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1333.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1334.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1335.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1336.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1337.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1338.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1339.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1340.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1341.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1342.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1343.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1344.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1345.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1346.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1347.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1350.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1351.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1352.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1353.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1354.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1355.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1356.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1357.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1358.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1359.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1360.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1361.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1362.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1363.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1364.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1365.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1366.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1367.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1368.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1369.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1370.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1371.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1372.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1373.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1374.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1375.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1376.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1377.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1378.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1379.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1380.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1381.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1382.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1383.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1384.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1385.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1386.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1387.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1388.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1389.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1390.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1391.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1392.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1393.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1394.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1395.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1396.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1397.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1398.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1399.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1400.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1401.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1402.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1403.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1404.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1405.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1406.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1407.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1408.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1409.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1410.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1411.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1412.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1413.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1414.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1415.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1416.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1417.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1418.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1419.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1420.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1421.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1422.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1423.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1424.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1425.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1426.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1427.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1428.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1429.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1430.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1431.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1432.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1433.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1434.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1435.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1436.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1437.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1438.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1439.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1440.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1441.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1442.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1443.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1444.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1445.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1446.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1447.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1448.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1449.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1450.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1451.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1452.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1453.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1454.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1455.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1456.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1457.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1458.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1459.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1460.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1461.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1462.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1463.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1464.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1465.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1466.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1467.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1468.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1469.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1470.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1472.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1473.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1474.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1475.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1476.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1477.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1478.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1479.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1480.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1481.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1482.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1483.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1484.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1485.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1486.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1487.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1488.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1489.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1490.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1491.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1492.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1493.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1494.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1495.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1496.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1497.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1500.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1501.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1502.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1503.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1504.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1505.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1506.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1507.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1508.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1509.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1510.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1511.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1512.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1513.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1514.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1515.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1516.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1517.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1518.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1519.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1520.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1521.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1522.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1523.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1524.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1525.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1526.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1527.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1528.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1529.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1530.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1531.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1532.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1533.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1534.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1535.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1536.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1537.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1538.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1539.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1540.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1541.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1542.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1543.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1544.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1545.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1546.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1547.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1548.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1549.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1550.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1551.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1552.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1553.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1554.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1555.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1556.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1557.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1558.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1559.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1560.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1561.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1562.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1563.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1564.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1565.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1566.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1567.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1568.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1569.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1570.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1571.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1572.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1573.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1574.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1575.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1576.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1577.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1578.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1579.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1580.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1581.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1582.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1583.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1584.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1585.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1586.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1587.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1588.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1589.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1590.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1591.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1592.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1593.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1594.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1595.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1596.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1597.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1598.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1650.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1651.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1652.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1653.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1654.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1655.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1656.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1657.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1658.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1659.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1660.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1661.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1662.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1663.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1664.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1665.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1666.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1667.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1668.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1669.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1670.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1671.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1672.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1673.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1674.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1675.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1676.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1677.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1678.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1679.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1680.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1681.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1682.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1683.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1684.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1685.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1686.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1687.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1688.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1689.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1690.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1691.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1692.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1693.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1694.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1695.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1696.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1697.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wandering Woods\Room1698.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wards of War\Room7003.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\West Havenwood\Room1046.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\West Havenwood\Room1047.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\West Leinster Chapel\Room5045.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\West Leinster Gatekeeper\Room5046.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wexfordshire Valley\Room16118.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wexfordshire Valley\Room16119.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wexfordshire Valley\Room16120.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wexfordshire Valley\Room16131.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Wexfordshire Valley\Room16144.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Scripts\Rooms\Zender%27s Woods\Room4336.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RealmOffline\RealmOffline.csproj">
+      <Project>{F4F94219-1784-4A6D-88D2-7C1AD9AB1070}</Project>
+      <Name>RealmOffline</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Data\Assemblies.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\Items\" />
+    <Folder Include="Scripts\Mobiles\" />
+    <Folder Include="Scripts\Rooms\Default Bedroom\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
